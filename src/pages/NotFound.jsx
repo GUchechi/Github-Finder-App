@@ -1,7 +1,7 @@
 import React from "react";
 import { FaHome } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import dribble from "../Assets/dribbble_1.gif";
+import dribble from "../components/layout/Assets/dribbble_1.gif";
 
 const NotFound = () => {
   return (
