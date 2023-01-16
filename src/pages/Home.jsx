@@ -5,8 +5,9 @@ import UserSearch from "../components/users/UserSearch";
 const Home = () => {
   return (
     <>
-      <UserSearch />
-      <UserResults />
+      {/* <UserSearch />
+      <UserResults /> */}
+      {process.env.REACT_APP_GITHUB_TOKEN}
     </>
   );
 };
