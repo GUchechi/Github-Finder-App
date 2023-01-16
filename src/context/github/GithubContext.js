@@ -9,26 +9,36 @@ const GITHUB_URL = "https://api.github.com/users";
 export const GithubProvider = ({ children }) => {
   const initialState = {
     users: [],
-    loading: true,
+    loading: false,
   };
 
   const [state, dispatch] = useReducer(githubReducer, initialState);
 
-  //   Fetching/Getting users data
+  //   Search Users
 
-  const fetchUsers = async () => {
-    const response = await fetch(GITHUB_URL);
-    const data = await response.json();
+  const searchUsers = async (text) => {
+    setLoading();
+
+    const params = new URLSearchParams({
+      q: text,
+    });
+
+    const response = await fetch(`${GITHUB_URL}/search/users?${params}`);
+    const { items } = await response.json();
 
     dispatch({
       type: "GET_USERS",
-      payload: data,
+      payload: items,
     });
   };
 
+  //Get initial users (testing purposes)
+
+  const setLoading = () => dispatch({ type: "SET_LOADING" });
+
   return (
     <GithubContext.Provider
-      value={{ users: state.users, loading: state.loading, fetchUsers }}
+      value={{ users: state.users, loading: state.loading, searchUsers }}
     >
       {children}
     </GithubContext.Provider>
