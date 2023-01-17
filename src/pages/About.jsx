@@ -10,7 +10,7 @@ function About() {
         <span>Github Finder Project By : </span>
         <a className="text-white" href="https://twitter.com/G_Uchechi">
           Godswill Uchechi
-        </a>
+        </a> 
       </p>
     </>
   );
