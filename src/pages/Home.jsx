@@ -9,7 +9,8 @@ const Home = () => {
         Hello There<span className="waving-hand">👋🏼</span>
       </h1>
       <p className="mb-4 text-2xl font-light">
-        Search for Github Profiles here <span> 😊</span>
+        Search for Github Profiles, profile details and repositories here{" "}
+        <span> 😊</span>
       </p>
       <UserSearch />
       <UserResults />
