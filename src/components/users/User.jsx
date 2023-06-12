@@ -156,7 +156,7 @@ const User = () => {
                 {public_repos}
               </div>
             </div>
-            <div className="stat">
+            {/* <div className="stat">
               <div className="stat-figure text-secondary">
                 <FaStore className="text-3xl md:text-5xl text-green-600" />
               </div>
@@ -164,7 +164,7 @@ const User = () => {
               <div className="stat-value pr-5 text-3xl md:text-4xl">
                 {public_gists}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <RepoList repos={repos} />
