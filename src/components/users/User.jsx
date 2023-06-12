@@ -138,7 +138,7 @@ const User = () => {
                 {followers}
               </div>
             </div>
-            <div className="stat">
+            {/* <div className="stat">
               <div className="stat-figure text-secondary">
                 <FaUserFriends className="text-3xl md:text-5xl text-green-600" />
               </div>
@@ -146,7 +146,7 @@ const User = () => {
               <div className="stat-value pr-5 text-3xl md:text-4xl">
                 {following}
               </div>
-            </div>
+            </div> */}
             <div className="stat">
               <div className="stat-figure text-secondary">
                 <FaCodepen className="text-3xl md:text-5xl text-green-600" />
